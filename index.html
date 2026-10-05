@@ -1,3 +1,225 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>आपका गाँव उमरौगढ़</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#222;
+}
+
+.header{
+    background:linear-gradient(135deg,#8b0000,#d4af37);
+    color:white;
+    text-align:center;
+    padding:20px 10px;
+}
+
+.header h1{
+    margin:5px 0;
+    font-size:28px;
+}
+
+.header p{
+    margin:5px 0;
+    font-size:17px;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+    padding:15px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    margin:15px 0;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.card img{
+    width:100%;
+    max-height:280px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.person img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #d4af37;
+}
+
+h2{
+    color:#8b0000;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    border:none;
+    border-radius:12px;
+    padding:14px;
+    margin:7px 0;
+    font-size:17px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+}
+
+.call{
+    background:#198754;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.complaint{
+    background:#8b0000;
+}
+
+#complaintForm{
+    display:none;
+    text-align:left;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:7px 0 14px;
+    border:1px solid #ccc;
+    border-radius:9px;
+    font-size:16px;
+}
+
+textarea{
+    height:110px;
+    resize:none;
+}
+
+.submit{
+    background:#d4af37;
+    color:#000;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#555;
+    font-size:15px;
+}
+
+.designer img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #d4af37;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🏡 आपका गाँव उमरौगढ़</h1>
+    <p>जनसेवा के लिए समर्पित</p>
+</div>
+
+<div class="container">
+
+    <!-- गाँव की फोटो -->
+    <div class="card">
+        <img src="gaon.jpg" alt="गाँव उमरौगढ़">
+        <h2>गाँव उमरौगढ़</h2>
+        <p>गाँव की जानकारी और जनसेवा के लिए आपका स्वागत है।</p>
+    </div>
+
+    <!-- पार्षद -->
+    <div class="card person">
+        <img src="dr-surender.jpg" alt="डॉ. सुरेंद्र यादव">
+        <h2>डॉ. सुरेंद्र यादव</h2>
+        <p>गाँव के पार्षद</p>
+
+        <button class="call"
+        onclick="window.location.href='tel:8058512483'">
+        📞 सीधे कॉल करें
+        </button>
+
+        <button class="whatsapp"
+        onclick="window.location.href='https://wa.me/918058512483?text=नमस्कार%20डॉ.%20सुरेंद्र%20यादव%20जी'">
+        💬 WhatsApp करें
+        </button>
+    </div>
+
+    <!-- शिकायत -->
+    <div class="card">
+        <button class="complaint" onclick="showComplaint()">
+            📝 शिकायत दर्ज करें
+        </button>
+
+        <div id="complaintForm">
+
+            <h2>शिकायत दर्ज करें</h2>
+
+            <label>आपका नाम</label>
+            <input type="text" id="name" placeholder="अपना नाम लिखें">
+
+            <label>मोबाइल नंबर</label>
+            <input type="tel" id="mobile" placeholder="मोबाइल नंबर">
+
+            <label>शिकायत</label>
+            <textarea id="message"
+            placeholder="अपनी शिकायत यहाँ लिखें"></textarea>
+
+            <button class="submit" onclick="sendComplaint()">
+                📤 शिकायत WhatsApp पर भेजें
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Designed by -->
+    <div class="card designer">
+        <img src="naveen.jpg" alt="Naveen Yadav">
+        <h2>Designed by Naveen Yadav</h2>
+        <p>Technical Consultant & Web Developer</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 आपका गाँव उमरौगढ़
+</div>
+
+<script>
+
+function showComplaint(){
+
+    var form = document.getElementById("complaintForm");
+
+    if(form.style.display === "none" || form.style.display === ""){
+        form.style.display = "block";
+    }else{
+        form.style.display = "none";
+    }
+}
 
 function sendComplaint(){
 
