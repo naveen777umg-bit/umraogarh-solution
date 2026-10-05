@@ -3,246 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>आपका गाँव उमरौगढ़</title>
+<title>Surender Village</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
-
+*{box-sizing:border-box}
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f7fa;
-    color:#222;
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f5f5;
+  color:#222;
+}
+header{
+  background:linear-gradient(135deg,#111,#8b6508);
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+}
+header h1{margin:0;font-size:32px}
+header p{font-size:17px}
+
+nav{
+  background:#111;
+  text-align:center;
+  padding:12px 5px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:6px 8px;
+  display:inline-block;
+  font-weight:bold;
 }
 
-.header{
-    background:linear-gradient(135deg,#8b0000,#d4af37);
-    color:white;
-    text-align:center;
-    padding:20px 10px;
+section{
+  max-width:1000px;
+  margin:20px auto;
+  padding:25px;
+  background:white;
+  border-radius:15px;
+  box-shadow:0 3px 12px #ccc;
+}
+h2{
+  color:#8b6508;
+  text-align:center;
 }
 
-.header h1{
-    margin:5px 0;
-    font-size:28px;
-}
-
-.header p{
-    margin:5px 0;
-    font-size:17px;
-}
-
-.container{
-    max-width:600px;
-    margin:auto;
-    padding:15px;
+.hero-img,.doctor-img{
+  display:block;
+  width:100%;
+  max-width:600px;
+  max-height:500px;
+  object-fit:cover;
+  margin:15px auto;
+  border-radius:15px;
 }
 
 .card{
-    background:white;
-    border-radius:18px;
-    padding:18px;
-    margin:15px 0;
-    text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+  padding:18px;
+  background:#fafafa;
+  border-left:5px solid #b8860b;
+  margin:15px 0;
+  border-radius:8px;
 }
 
-.card img{
-    width:100%;
-    max-height:280px;
-    object-fit:cover;
-    border-radius:14px;
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
 }
 
-.person img{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #d4af37;
+.buttons{
+  text-align:center;
+  margin-top:20px;
+}
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  margin:7px;
+  border-radius:25px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+.call{background:#1677ff}
+.whatsapp{background:#25d366}
+
+form input,form textarea{
+  width:100%;
+  padding:13px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+form button{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:8px;
+  background:#8b6508;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
 }
 
-h2{
-    color:#8b0000;
-    margin:10px 0;
-}
-
-button{
-    width:100%;
-    border:none;
-    border-radius:12px;
-    padding:14px;
-    margin:7px 0;
-    font-size:17px;
-    font-weight:bold;
-    color:white;
-    cursor:pointer;
-}
-
-.call{
-    background:#198754;
-}
-
-.whatsapp{
-    background:#25D366;
-}
-
-.complaint{
-    background:#8b0000;
-}
-
-#complaintForm{
-    display:none;
-    text-align:left;
-}
-
-input, textarea{
-    width:100%;
-    padding:12px;
-    margin:7px 0 14px;
-    border:1px solid #ccc;
-    border-radius:9px;
-    font-size:16px;
-}
-
-textarea{
-    height:110px;
-    resize:none;
-}
-
-.submit{
-    background:#d4af37;
-    color:#000;
-}
-
-.footer{
-    text-align:center;
-    padding:20px;
-    color:#555;
-    font-size:15px;
-}
-
-.designer img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid #d4af37;
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:25px 10px;
+  margin-top:30px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
-    <h1>🏡 आपका गाँव उमरौगढ़</h1>
-    <p>जनसेवा के लिए समर्पित</p>
-</div>
+<header>
+  <h1>Surender Village</h1>
+  <p>गाँव की जानकारी, विकास और जनसेवा का डिजिटल मंच</p>
+</header>
 
-<div class="container">
+<nav>
+  <a href="#home">Home</a>
+  <a href="#village">गाँव जानकारी</a>
+  <a href="#surender">सुरेन्द्र</a>
+  <a href="#complaint">Complaint</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <!-- गाँव की फोटो -->
-    <div class="card">
-        <img src="gaon.jpg" alt="गाँव उमरौगढ़">
-        <h2>गाँव उमरौगढ़</h2>
-        <p>गाँव की जानकारी और जनसेवा के लिए आपका स्वागत है।</p>
-    </div>
+<section id="home">
+  <h2>Surender Village में आपका स्वागत है</h2>
+  <img src="gaon.jpg" class="hero-img" alt="Surender Village">
+  <p>
+    यह वेबसाइट गाँव की जानकारी, सामाजिक गतिविधियों,
+    जनसमस्याओं और विकास से जुड़ी जानकारी को एक स्थान पर
+    उपलब्ध कराने के उद्देश्य से बनाई गई है।
+  </p>
+</section>
 
-    <!-- पार्षद -->
-    <div class="card person">
-        <img src="dr-surender.jpg" alt="डॉ. सुरेंद्र यादव">
-        <h2>डॉ. सुरेंद्र यादव</h2>
-        <p>गाँव के पार्षद</p>
+<section id="village">
+  <h2>गाँव की जानकारी</h2>
 
-        <button class="call"
-        onclick="window.location.href='tel:8058512483'">
-        📞 सीधे कॉल करें
-        </button>
+  <div class="card">
+    <h3>🏡 हमारा गाँव</h3>
+    <p>
+      Surender Village एक सुंदर और विकसित गाँव की दिशा में
+      आगे बढ़ने वाला डिजिटल समुदाय है।
+    </p>
+  </div>
 
-        <button class="whatsapp"
-        onclick="window.location.href='https://wa.me/918058512483?text=नमस्कार%20डॉ.%20सुरेंद्र%20यादव%20जी'">
-        💬 WhatsApp करें
-        </button>
-    </div>
+  <div class="card">
+    <h3>📢 जनसेवा</h3>
+    <p>
+      गाँव की समस्याओं और आवश्यकताओं को सामने लाने तथा
+      संबंधित लोगों तक पहुँचाने के लिए यह मंच बनाया गया है।
+    </p>
+  </div>
 
-    <!-- शिकायत -->
-    <div class="card">
-        <button class="complaint" onclick="showComplaint()">
-            📝 शिकायत दर्ज करें
-        </button>
+  <div class="card">
+    <h3>🌱 विकास</h3>
+    <p>
+      शिक्षा, स्वच्छता, सड़क, पानी, बिजली और अन्य
+      जनहित के विषयों पर जानकारी साझा की जा सकती है।
+    </p>
+  </div>
+</section>
 
-        <div id="complaintForm">
+<section id="surender">
+  <h2>Dr. Surender Yadav</h2>
 
-            <h2>शिकायत दर्ज करें</h2>
+  <img src="dr-surender.jpg" class="doctor-img"
+       alt="Dr. Surender Yadav">
 
-            <label>आपका नाम</label>
-            <input type="text" id="name" placeholder="अपना नाम लिखें">
+  <div class="card">
+    <h3>Dr. Surender Yadav</h3>
+    <p>
+      समाज और जनसेवा से जुड़े महत्वपूर्ण विषयों को
+      डिजिटल माध्यम से लोगों तक पहुँचाने का प्रयास।
+    </p>
+  </div>
+</section>
 
-            <label>मोबाइल नंबर</label>
-            <input type="tel" id="mobile" placeholder="मोबाइल नंबर">
+<section id="complaint">
+  <h2>📢 Complaint / शिकायत</h2>
 
-            <label>शिकायत</label>
-            <textarea id="message"
-            placeholder="अपनी शिकायत यहाँ लिखें"></textarea>
+  <p>
+    गाँव से संबंधित किसी समस्या, सुझाव या शिकायत को
+    यहाँ दर्ज किया जा सकता है।
+  </p>
 
-            <button class="submit" onclick="sendComplaint()">
-                📤 शिकायत WhatsApp पर भेजें
-            </button>
+  <form action="mailto:" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="आपका नाम" required>
 
-        </div>
-    </div>
+    <input type="text" name="Mobile"
+           placeholder="मोबाइल नंबर">
 
-    <!-- Designed by -->
-    <div class="card designer">
-        <img src="naveen.jpg" alt="Naveen Yadav">
-        <h2>Designed by Naveen Yadav</h2>
-        <p>Technical Consultant & Web Developer</p>
-    </div>
+    <textarea name="Complaint" rows="6"
+              placeholder="अपनी शिकायत / समस्या लिखें"
+              required></textarea>
 
-</div>
+    <button type="submit">शिकायत भेजें</button>
+  </form>
+</section>
 
-<div class="footer">
-    © 2026 आपका गाँव उमरौगढ़
-</div>
+<section id="gallery">
+  <h2>📸 Photo Gallery</h2>
 
-<script>
+  <div class="gallery">
+    <img src="gaon.jpg" alt="Village Photo">
+    <img src="gaon2.jpg" alt="Village Photo">
+    <img src="gaon3.jpg" alt="Village Photo">
+    <img src="dr-surender.jpg" alt="Dr. Surender Yadav">
+  </div>
+</section>
 
-function showComplaint(){
+<section id="contact">
+  <h2>📞 Contact</h2>
 
-    var form = document.getElementById("complaintForm");
+  <p style="text-align:center">
+    संपर्क करने के लिए नीचे दिए गए विकल्प का उपयोग करें।
+  </p>
 
-    if(form.style.display === "none" || form.style.display === ""){
-        form.style.display = "block";
-    }else{
-        form.style.display = "none";
-    }
-}
+  <div class="buttons">
 
-function sendComplaint(){
+    <a class="btn call"
+       href="tel:+91XXXXXXXXXX">
+       📞 Call Now
+    </a>
 
-    var name = document.getElementById("name").value;
-    var mobile = document.getElementById("mobile").value;
-    var message = document.getElementById("message").value;
+    <a class="btn whatsapp"
+       href="https://wa.me/91XXXXXXXXXX"
+       target="_blank">
+       💬 WhatsApp
+    </a>
 
-    if(name === "" || mobile === "" || message === ""){
-        alert("कृपया सभी जानकारी भरें।");
-        return;
-    }
+  </div>
+</section>
 
-    var text =
-    "गाँव उमरौगढ़ शिकायत%0A%0A" +
-    "नाम: " + encodeURIComponent(name) + "%0A" +
-    "मोबाइल: " + encodeURIComponent(mobile) + "%0A" +
-    "शिकायत: " + encodeURIComponent(message);
-
-    window.location.href =
-    "https://wa.me/918058512483?text=" + text;
-}
-
-</script>
+<footer>
+  <p>© 2026 Surender Village</p>
+  <p><b>Designed by Naveen Yadav</b></p>
+  <p>Technical Consultant & Web Developer</p>
+</footer>
 
 </body>
 </html>
