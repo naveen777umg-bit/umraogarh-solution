@@ -1,244 +1,26 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Surender Village | सुरेन्द्र गाँव</title>
+function sendComplaint(){
 
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+    var name = document.getElementById("name").value;
+    var mobile = document.getElementById("mobile").value;
+    var message = document.getElementById("message").value;
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f4f7fb;
-    color:#222;
-    line-height:1.6;
-}
-
-header{
-    background:linear-gradient(135deg,#075e54,#128c7e,#25d366);
-    color:white;
-    text-align:center;
-    padding:30px 15px;
-}
-
-header h1{
-    font-size:34px;
-    margin-bottom:8px;
-}
-
-header p{
-    font-size:18px;
-}
-
-nav{
-    background:#063f38;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    padding:10px;
-    position:sticky;
-    top:0;
-    z-index:10;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:10px 14px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    background:#25d366;
-    border-radius:8px;
-}
-
-.container{
-    max-width:950px;
-    margin:auto;
-    padding:15px;
-}
-
-.card{
-    background:white;
-    margin:20px 0;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
-}
-
-.card h2{
-    color:#075e54;
-    margin-bottom:15px;
-    text-align:center;
-}
-
-.hero{
-    text-align:center;
-    padding:30px 15px;
-    background:white;
-    margin:20px 0;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
-}
-
-.hero h2{
-    color:#075e54;
-    font-size:28px;
-}
-
-.hero p{
-    margin-top:10px;
-    font-size:17px;
-}
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.info-box{
-    background:#eefaf7;
-    padding:18px;
-    border-radius:12px;
-    border-left:5px solid #128c7e;
-}
-
-.profile{
-    text-align:center;
-}
-
-.profile img{
-    width:170px;
-    height:170px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #128c7e;
-    margin-bottom:12px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
-.gallery img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:12px;
-}
-
-label{
-    display:block;
-    margin-top:12px;
-    font-weight:bold;
-}
-
-input,textarea,select{
-    width:100%;
-    padding:13px;
-    margin-top:6px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    font-size:16px;
-}
-
-textarea{
-    min-height:120px;
-}
-
-button{
-    width:100%;
-    margin-top:15px;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#128c7e;
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-}
-
-button:hover{
-    background:#075e54;
-}
-
-.contact-btn{
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    background:#25d366;
-    color:white;
-    padding:14px;
-    border-radius:10px;
-    margin-top:10px;
-    font-weight:bold;
-}
-
-.call-btn{
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    background:#075e54;
-    color:white;
-    padding:14px;
-    border-radius:10px;
-    margin-top:10px;
-    font-weight:bold;
-}
-
-footer{
-    background:#063f38;
-    color:white;
-    text-align:center;
-    padding:25px 10px;
-    margin-top:30px;
-}
-
-footer strong{
-    color:#25d366;
-}
-
-@media(max-width:650px){
-
-    header h1{
-        font-size:27px;
+    if(name === "" || mobile === "" || message === ""){
+        alert("कृपया सभी जानकारी भरें।");
+        return;
     }
 
-    .info-grid{
-        grid-template-columns:1fr;
-    }
+    var text =
+    "गाँव उमरौगढ़ शिकायत%0A%0A" +
+    "नाम: " + encodeURIComponent(name) + "%0A" +
+    "मोबाइल: " + encodeURIComponent(mobile) + "%0A" +
+    "शिकायत: " + encodeURIComponent(message);
 
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .gallery img{
-        height:140px;
-    }
+    window.location.href =
+    "https://wa.me/918058512483?text=" + text;
 }
-</style>
-</head>
 
-<body>
+</script>
 
-<header>
-    <h1>🌿 सुरेन्द्र गाँव 🌿</h1>
-    <p>Surender Village – गाँव की जानकारी, सेवा और शिकायत पोर्टल</p>
-</header>
-
-<nav>
-    <a href="#home">होम</a>
-    <a href="#village">गाँव की जानकारी</a>
-    <a href="#surender">सुरेन्द्र</a>
-    <a href="#gallery">फोटो गैलरी</a>
-    <a href="#complaint
+</body>
+</html>
