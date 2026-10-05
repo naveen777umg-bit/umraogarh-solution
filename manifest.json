@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1e88e5">
+
+  <title>उमरावगढ़ समाधान</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #1e88e5;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin: 6px;
+      font-weight: bold;
+    }
+
+    .call {
+      background: #2e7d32;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .complaint {
+      background: #e53935;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>उमरावगढ़</h1>
+    <p>हमारे गाँव की डिजिटल सेवा</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="gaon.jpg" alt="उमरावगढ़ गाँव">
+      <h2>आपका गाँव उमरावगढ़</h2>
+      <p>
+        उमरावगढ़ गाँव की जानकारी और डिजिटल सेवाओं के लिए आपका स्वागत है।
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="dr-surender.jpg" alt="डॉ. सुरेंद्र यादव">
+      <h2>पार्षद डॉ. सुरेंद्र यादव</h2>
+
+      <a class="btn call" href="tel:8058512483">
+        📞 कॉल करें
+      </a>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/918058515483"
+         target="_blank">
+        💬 WhatsApp करें
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>शिकायत दर्ज करें</h2>
+      <p>
+        गाँव से संबंधित शिकायत या समस्या WhatsApp पर भेजें।
+      </p>
+
+      <a class="btn complaint"
+         href="https://wa.me/918058515483?text=नमस्ते,%20मुझे%20उमरावगढ़%20गाँव%20से%20संबंधित%20शिकायत%20दर्ज%20करानी%20है।"
+         target="_blank">
+        📝 शिकायत दर्ज करें
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>डिजिटल सेवा</h2>
+      <p>
+        उमरावगढ़ गाँव को डिजिटल रूप से जोड़ने की एक पहल।
+      </p>
+    </div>
+
+    <div class="card">
+      <p>Designed & Developed by</p>
+      <h2>Naveen Yadav</h2>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Umraogarh Solution
+  </footer>
+
+</body>
+</html>
