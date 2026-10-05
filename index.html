@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Umraogarh - हमारा गाँव</title>
+<title>Surender Village | सुरेन्द्र गाँव</title>
 
 <style>
 *{
@@ -15,106 +15,216 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#f4f7f6;
+    background:#f4f7fb;
     color:#222;
+    line-height:1.6;
 }
 
 header{
-    background:linear-gradient(135deg,#087f5b,#19a66f);
+    background:linear-gradient(135deg,#075e54,#128c7e,#25d366);
     color:white;
     text-align:center;
-    padding:45px 20px;
-    border-radius:0 0 35px 35px;
+    padding:30px 15px;
 }
 
 header h1{
-    font-size:42px;
-    letter-spacing:2px;
+    font-size:34px;
+    margin-bottom:8px;
 }
 
 header p{
-    font-size:23px;
-    margin-top:12px;
+    font-size:18px;
+}
+
+nav{
+    background:#063f38;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:10px;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#25d366;
+    border-radius:8px;
 }
 
 .container{
-    max-width:900px;
+    max-width:950px;
     margin:auto;
-    padding:25px 18px;
+    padding:15px;
 }
 
 .card{
     background:white;
     margin:20px 0;
     padding:25px;
-    border-radius:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.10);
-    text-align:center;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
 }
 
 .card h2{
-    color:#087f5b;
-    margin-bottom:18px;
+    color:#075e54;
+    margin-bottom:15px;
+    text-align:center;
 }
 
-.doctor-img{
-    width:180px;
-    height:180px;
+.hero{
+    text-align:center;
+    padding:30px 15px;
+    background:white;
+    margin:20px 0;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
+}
+
+.hero h2{
+    color:#075e54;
+    font-size:28px;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:17px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-box{
+    background:#eefaf7;
+    padding:18px;
+    border-radius:12px;
+    border-left:5px solid #128c7e;
+}
+
+.profile{
+    text-align:center;
+}
+
+.profile img{
+    width:170px;
+    height:170px;
     object-fit:cover;
     border-radius:50%;
-    border:6px solid #19a66f;
-    margin-bottom:15px;
-}
-
-.button{
-    display:block;
-    text-decoration:none;
-    color:white;
-    padding:16px;
-    margin:14px 0;
-    border-radius:15px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.call{
-    background:#1677ee;
-}
-
-.whatsapp{
-    background:#20c76b;
-}
-
-.complaint{
-    background:#fff3cd;
-    border-left:6px solid #ff9800;
+    border:5px solid #128c7e;
+    margin-bottom:12px;
 }
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:12px;
 }
 
 .gallery img{
     width:100%;
-    height:160px;
+    height:180px;
     object-fit:cover;
-    border-radius:14px;
+    border-radius:12px;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+input,textarea,select{
+    width:100%;
+    padding:13px;
+    margin-top:6px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:120px;
+}
+
+button{
+    width:100%;
+    margin-top:15px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#128c7e;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#075e54;
+}
+
+.contact-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#25d366;
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.call-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#075e54;
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    margin-top:10px;
+    font-weight:bold;
 }
 
 footer{
-    margin-top:30px;
-    background:#087f5b;
+    background:#063f38;
     color:white;
     text-align:center;
-    padding:25px;
-    border-radius:25px 25px 0 0;
+    padding:25px 10px;
+    margin-top:30px;
 }
 
-.small{
-    margin-top:8px;
-    font-size:14px;
+footer strong{
+    color:#25d366;
+}
+
+@media(max-width:650px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery img{
+        height:140px;
+    }
 }
 </style>
 </head>
@@ -122,20 +232,13 @@ footer{
 <body>
 
 <header>
-    <h1>UMRAOGARH</h1>
-    <p>हमारा गाँव • हमारी पहचान</p>
+    <h1>🌿 सुरेन्द्र गाँव 🌿</h1>
+    <p>Surender Village – गाँव की जानकारी, सेवा और शिकायत पोर्टल</p>
 </header>
 
-<div class="container">
-
-    <!-- DOCTOR -->
-    <div class="card">
-        <h2>डॉ. सुरेन्द्र यादव</h2>
-
-        <img src="dr-surendra.jpg"
-             alt="Dr. Surendra Yadav"
-             class="doctor-img">
-
-        <p>गाँव के लोगों के लिए संपर्क एवं सहायता</p>
-
-        <a
+<nav>
+    <a href="#home">होम</a>
+    <a href="#village">गाँव की जानकारी</a>
+    <a href="#surender">सुरेन्द्र</a>
+    <a href="#gallery">फोटो गैलरी</a>
+    <a href="#complaint
