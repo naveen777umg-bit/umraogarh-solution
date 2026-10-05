@@ -1,126 +1,141 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Umraogarh Village App</title>
+<title>Umraogarh - हमारा गाँव</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7f5;
-      color: #222;
-    }
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f7f6;
+    color:#222;
+}
 
-    .header {
-      background: #198754;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-      border-radius: 0 0 25px 25px;
-    }
+header{
+    background:linear-gradient(135deg,#087f5b,#19a66f);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    border-radius:0 0 35px 35px;
+}
 
-    .header h1 {
-      margin: 0;
-      font-size: 38px;
-    }
+header h1{
+    font-size:42px;
+    letter-spacing:2px;
+}
 
-    .header p {
-      margin: 10px 0 0;
-      font-size: 20px;
-    }
+header p{
+    font-size:23px;
+    margin-top:12px;
+}
 
-    .container {
-      max-width: 600px;
-      margin: 25px auto;
-      padding: 15px;
-    }
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:25px 18px;
+}
 
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 17px;
-      margin: 14px 0;
-      text-align: center;
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-    }
+.card{
+    background:white;
+    margin:20px 0;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    text-align:center;
+}
 
-    .doctor {
-      background: #0d6efd;
-    }
+.card h2{
+    color:#087f5b;
+    margin-bottom:18px;
+}
 
-    .whatsapp {
-      background: #25d366;
-    }
+.doctor-img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #19a66f;
+    margin-bottom:15px;
+}
 
-    .complaint {
-      background: #fd7e14;
-    }
+.button{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:16px;
+    margin:14px 0;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+}
 
-    .notice {
-      background: #6f42c1;
-    }
+.call{
+    background:#1677ee;
+}
 
-    .location {
-      background: #20c997;
-    }
+.whatsapp{
+    background:#20c76b;
+}
 
-    .emergency {
-      background: #dc3545;
-    }
+.complaint{
+    background:#fff3cd;
+    border-left:6px solid #ff9800;
+}
 
-    .info {
-      background: white;
-      padding: 20px;
-      margin-top: 25px;
-      border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
 
-    .info h2 {
-      color: #198754;
-      margin-top: 0;
-    }
+.gallery img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:14px;
+}
 
-    footer {
-      text-align: center;
-      padding: 25px 10px;
-      color: #666;
-      font-size: 14px;
-    }
-  </style>
+footer{
+    margin-top:30px;
+    background:#087f5b;
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-radius:25px 25px 0 0;
+}
+
+.small{
+    margin-top:8px;
+    font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="header">
+<header>
     <h1>UMRAOGARH</h1>
     <p>हमारा गाँव • हमारी पहचान</p>
-  </div>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <a class="btn doctor"
-       href="tel:+919XXXXXXXXX">
-      📞 Dr. Surendra Yadav को Call करें
-    </a>
+    <!-- DOCTOR -->
+    <div class="card">
+        <h2>डॉ. सुरेन्द्र यादव</h2>
 
-    <a class="btn whatsapp"
-       href="https://wa.me/918058512483"
-       target="_blank">
-      💬 WhatsApp से संपर्क करें
-    </a>
+        <img src="dr-surendra.jpg"
+             alt="Dr. Surendra Yadav"
+             class="doctor-img">
 
-    <a
+        <p>गाँव के लोगों के लिए संपर्क एवं सहायता</p>
+
+        <a
